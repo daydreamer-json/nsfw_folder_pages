@@ -39,8 +39,17 @@ body {
   display: block;
   clear: both;
 }
+
+
+
 button {
   cursor: pointer;
+}
+
+
+
+body, button {
+  font-family: system-ui;
 }
 
 
@@ -55,6 +64,12 @@ button {
 .main h1, .main h2, .main h3, .main h4, .main h5 {
   margin: 0;
   padding: 0;
+}
+.imageCountShow {
+  display: flex;
+}
+#imgCount {
+  font-weight: bold;
 }
 .image_holder img {
   width: 100%;
@@ -76,17 +91,16 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
-.image_holder img, .image_holder img.lazyloading {
-  opacity: 0;
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
-  -webkit-transition: filter 2s, -webkit-filter 2s, opacity 2s;
-  transition: filter 2s, -webkit-filter 2s, opacity 2s;
-  s;
+.viewer-backdrop div {
+  background-color: rgba(0,0,0,0.7);
 }
-.image_holder.lazyloaded img.lazyloaded {
-  filter: blur(0);
-  -webkit-filter: blur(0);
-  opacity: 1;
+.viewer-download {
+  color: #fff;
+  font-family: "Font Awesome 6 Free", serif;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
 }
-
+.viewer-download::before {
+  content: "\f019";
+}
